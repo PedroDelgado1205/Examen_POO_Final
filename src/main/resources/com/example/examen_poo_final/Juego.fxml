@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen_poo_final.HelloGame">
+   <children>
+      <Button layoutX="42.0" layoutY="154.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="182.0" style="-fx-background-color: #c94848;"  onAction="#onHelloButtonOp1" fx:id="opcionButton1">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="372.0" layoutY="154.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="182.0" style="-fx-background-color: #c94848;"  onAction="#onHelloButtonOp2" fx:id="opcionButton2">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="372.0" layoutY="272.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="182.0" style="-fx-background-color: #c94848;"  onAction="#onHelloButtonOp4" fx:id="opcionButton4">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="42.0" layoutY="279.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="182.0" style="-fx-background-color: #c94848;"  onAction="#onHelloButtonOp3" fx:id="opcionButton3">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </Button>
+      <Label prefHeight="98.0" prefWidth="600.0" fx:id="preguntaLabel">
+         <font>
+            <Font name="Cambria" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

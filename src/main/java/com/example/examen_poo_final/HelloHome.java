@@ -5,10 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import modelo.Pregunta;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class HelloGame {
+public class HelloHome {
 
     private Stage currentStage; // Mantén una referencia al Stage actual
 
@@ -20,6 +24,12 @@ public class HelloGame {
     private void onHelloButtonGame() throws IOException {
         cerrarVentanaActual();
         cargarVentana("Juego.fxml");
+        List<Pregunta> preguntas = new ArrayList<>();
+        preguntas.add(new Pregunta("Pregunta 1", Arrays.asList("Opción 1", "Opción 2", "Opción 3", "Opción 4"), 0));
+        preguntas.add(new Pregunta("Pregunta 2", Arrays.asList("Opción 1", "Opción 2", "Opción 3", "Opción 4"), 1));
+        preguntas.add(new Pregunta("Pregunta 3", Arrays.asList("Opción 1", "Opción 2", "Opción 3", "Opción 4"), 2));
+
+        HelloGame helloGame = new HelloGame(preguntas);
     }
 
     @FXML
@@ -42,12 +52,10 @@ public class HelloGame {
 
     private void cargarVentana(String fxmlFileName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxmlFileName));
-        Pane pane = fxmlLoader.load(); // Cargar el contenido del archivo FXML
-
-        Stage stage = new Stage(); // Crear una instancia de Stage
-        stage.setScene(new Scene(pane)); // Establecer la escena con el contenido cargado
-        stage.show(); // Mostrar el stage
-
-        setCurrentStage(stage); // Establecer el nuevo Stage como ventana actual
+        Pane pane = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(pane));
+        stage.show();
+        setCurrentStage(stage);
     }
 }
